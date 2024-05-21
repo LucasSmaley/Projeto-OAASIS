@@ -22,7 +22,7 @@ export default function Login() {
 
     // Aqui você pode adicionar lógica de autenticação real
     // Por enquanto, apenas navegue para a tela de Noticias
-    navigation.navigate('Noticias');
+    navigation.navigate('TelaInicialPai');
   };
 
   const handleNavigateToCriarLogin = () => {
