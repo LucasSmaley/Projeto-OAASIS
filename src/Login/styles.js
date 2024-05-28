@@ -53,4 +53,9 @@ export const styles = StyleSheet.create({
   subTextButton: {
     color: 'blue',
   },
+  labelError:{
+    alingSelf: 'flex-start',
+    Color: 'aff375b',
+    marginBottom: 8,
+  },
 });

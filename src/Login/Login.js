@@ -5,23 +5,27 @@ import { StatusBar } from 'expo-status-bar';
 import { Pressable, Text, TextInput, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native'; // Importe useNavigation
 import { styles } from './styles';
+import { useForm, Controller } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+const schema = yup.object({
+  email: yup.string().email("Email Inválido").required("Informe seu email"),
+  senha: yup.string().min(6, "A senha deve ter pelo menos 6 caracteres").required("Informe sua senha")
+});
 
 export default function Login() {
+  const { control, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
   const navigation = useNavigation(); // Obtenha o objeto de navegação
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
   const [mensagemErro, setMensagemErro] = useState('');
 
-  const handleLogin = () => {
-    // Aqui você pode adicionar lógica de verificação do usuário
-    // Por enquanto, apenas verificar se o email e senha são preenchidos
-    if (email === '' || senha === '') {
-      setMensagemErro('Por favor, preencha todos os campos.');
-      return;
-    }
+  const handleSignIn = (data) => {
+    console.log(data);
 
     // Aqui você pode adicionar lógica de autenticação real
-    // Por enquanto, apenas navegue para a tela de Noticias
+    // Por enquanto, apenas navegue para a tela de Notícias
     navigation.navigate('TelaInicialPai');
   };
 
@@ -33,25 +37,41 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <Text style={styles.formTitle}>Login OAASIS</Text>
-      <TextInput
-        style={styles.formInput}
-        placeholder="Informe o E-mail"
-        keyboardType="email-address"
-        autoCapitalize="none"
-        autoCompleteType="email"
-        value={email}
-        onChangeText={setEmail}
+      <Controller
+        control={control}
+        name="email"
+        render={({ field: { onChange, onBlur, value } }) => (
+          <View>
+            <TextInput
+              style={styles.formInput}
+              onChangeText={onChange}
+              onBlur={onBlur}
+              value={value}
+              placeholder="Digite seu email"
+            />
+            {errors.email && <Text style={styles.labelError}>{errors.email.message}</Text>}
+          </View>
+        )}
       />
-      <TextInput
-        style={styles.formInput}
-        placeholder="Informe a Senha"
-        autoCapitalize="none"
-        secureTextEntry
-        value={senha}
-        onChangeText={setSenha}
+      <Controller
+        control={control}
+        name="senha"
+        render={({ field: { onChange, onBlur, value } }) => (
+          <View>
+            <TextInput
+              style={styles.formInput}
+              onChangeText={onChange}
+              onBlur={onBlur}
+              value={value}
+              placeholder="Digite sua senha"
+              secureTextEntry={true}
+            />
+            {errors.senha && <Text style={styles.labelError}>{errors.senha.message}</Text>}
+          </View>
+        )}
       />
       {mensagemErro !== '' && <Text style={styles.errorMessage}>{mensagemErro}</Text>}
-      <Pressable style={styles.formButton} onPress={handleLogin}>
+      <Pressable style={styles.formButton} onPress={handleSubmit(handleSignIn)}>
         <Text style={styles.textButton}>Logar</Text>
       </Pressable>
       <View style={styles.subContainer}>
@@ -66,3 +86,5 @@ export default function Login() {
     </View>
   );
 }
+
+
