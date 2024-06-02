@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+
+  background:{
+
+    backgroundColor: '#cbf3f0',
+  },
+
   container: {
     flex: 1,
     alignItems: 'center',
@@ -8,6 +14,7 @@ export const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     backgroundColor: '#12B6B4',
+    borderRadius: 25,
   },
 
   crecei:{
@@ -20,7 +27,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'blue',
+    color: '#ffbf69',
     marginBottom: 20,
   },
 
@@ -31,17 +38,13 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 
-  eventoItem: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
 
   addButton: {
-    backgroundColor: 'blue',
+    backgroundColor: '#00bbf9',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    margin: 10,
+    margin: 15,
   },
 
   addButtonText: {

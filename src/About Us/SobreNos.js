@@ -8,7 +8,7 @@ export default function SobreNos() {
   const navigation = useNavigation();
 
   return (
-    <ScrollView>
+    <ScrollView style = {styles.background}>
       <View style={styles.sobreNos}>
         <Text style={styles.title}>Sobre Nós</Text>
 

@@ -15,7 +15,6 @@ export default function Noticias() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Notícias</Text>
       <ScrollView style={styles.eventosContainer}>
         {eventosList.map((evento, index) => (
           <Text key={index} style={styles.eventoItem}>{evento}</Text>

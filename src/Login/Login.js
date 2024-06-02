@@ -26,12 +26,12 @@ export default function Login() {
 
     // Aqui você pode adicionar lógica de autenticação real
     // Por enquanto, apenas navegue para a tela de Notícias
-    navigation.navigate('TelaInicialPai');
+    navigation.navigate('Home');
   };
 
   const handleNavigateToCriarLogin = () => {
     // Navegar para a tela de criação de login (CriarLogin)
-    navigation.navigate('CriarLogin');
+    navigation.navigate('Criar Login');
   };
 
   return (

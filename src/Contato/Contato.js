@@ -34,18 +34,9 @@ export default function Contato() {
   };
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.title}>Contato</Text>
-      </View>
+    <ScrollView style={styles.background}>
 
-      <View style={styles.container}>
-        <Text style={styles.informativosContainer}>
-          Rua: Luiz Mestriner, 413 Jd. Alexandre Balbo Ribeirão Preto - SP
-          {"\n"}(16)3975-1535
-          {"\n\n"}adm@oaasis.org.br
-        </Text>
-      </View>
+      
 
       <View style={styles.contSocial}>
 
@@ -64,6 +55,14 @@ export default function Contato() {
           resizeMode="contain" // Specify the path to your image
         />
         </TouchableOpacity>
+      </View>
+
+      <View style={styles.container}>
+        <Text style={styles.informativosContainer}>
+          Rua: Luiz Mestriner, 413 Jd. Alexandre Balbo Ribeirão Preto - SP
+          {"\n"}(16)3975-1535
+          {"\n\n"}adm@oaasis.org.br
+        </Text>
       </View>
 
       <View style={styles.container}>

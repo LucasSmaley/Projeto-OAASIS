@@ -17,18 +17,18 @@ export default function Projetos() {
 
   const handleApoio = () => {
     const url =
-      "https://static.wixstatic.com/media/726aa5_706f4b2bfd9542fda4b2757b0488e692~mv2.jpeg/v1/fill/w_526,h_745,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202020-05-15%20at%2012_00_46%20PM.jpeg"; // Specify the URL of the website you want to open
+      "https://static.wixstatic.com/media/726aa5_706f4b2bfd9542fda4b2757b0488e692~mv2.jpeg/v1/fill/w_526,h_745,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/WhatsApp%20Image%202020-05-15%20at%2012_00_46%20PM.jpeg";
     Linking.openURL(url);
   };
 
   const handlePizza = () => {
     const url =
-      "https://static.wixstatic.com/media/726aa5_b91d368e82dc4fc58e0d11e6996fe787~mv2.jpg/v1/fill/w_419,h_745,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/LOGO%20VEREDAS.jpg"; // Specify the URL of the website you want to open
+      "https://static.wixstatic.com/media/726aa5_b91d368e82dc4fc58e0d11e6996fe787~mv2.jpg/v1/fill/w_419,h_745,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/LOGO%20VEREDAS.jpg"; 
     Linking.openURL(url);
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.informativosContainer}>
           Campanha de Apoio Humanitário Contra a COVID 19. Realizada em 2020 que

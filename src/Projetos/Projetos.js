@@ -14,23 +14,22 @@ export default function Projetos() {
   const navigation = useNavigation();
 
   const handleVeredas = () => {
-    const url = "https://www.oaasis.org.br/veredas"; // Specify the URL of the website you want to open
-    Linking.openURL(url);
+    const url = "https://www.oaasis.org.br/veredas"; 
   };
 
   const handleCriacao = () => {
-    const url = "https://www.oaasis.org.br/criacao"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/criacao";
     Linking.openURL(url);
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.background}> 
       
       <View style={styles.container}>
         
       <Image
         source={require('../../assets/veredas.jpg')} 
-        style={styles.proj}// Specify the path to your image
+        style={styles.img}
       />
 
         <Pressable style={styles.addButton} onPress={handleVeredas}>
@@ -42,7 +41,7 @@ export default function Projetos() {
         
         <Image
           source={require('../../assets/cria.png')} 
-          style={styles.proj}// Specify the path to your image
+          style={styles.img}
         />
   
           <Pressable style={styles.addButton} onPress={handleCriacao}>

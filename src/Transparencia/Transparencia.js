@@ -15,17 +15,17 @@ export default function Transparencia() {
   const navigation = useNavigation();
 
   const handleOaasis = () => {
-    const url = "https://www.oaasis.org.br/c%C3%B3pia-crecei"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/c%C3%B3pia-crecei"; 
     Linking.openURL(url);
   };
 
   const handleCrecei = () => {
-    const url = "https://www.oaasis.org.br/c%C3%B3pia-transparencia"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/c%C3%B3pia-transparencia"; 
     Linking.openURL(url);
   };
 
   return (
-    <ScrollView>
+    <ScrollView style = {styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>TRANSPARÊNCIA</Text>
 
@@ -43,7 +43,7 @@ export default function Transparencia() {
       <View style={styles.container}>
         
       <Image
-        source={require('../../assets/oaasis.png')} // Specify the path to your image
+        source={require('../../assets/oaasis.png')} 
       />
 
         <Pressable style={styles.addButton} onPress={handleOaasis}>
@@ -55,7 +55,7 @@ export default function Transparencia() {
         
         <Image
           source={require('../../assets/crecei.png')} 
-          style={styles.crecei}// Specify the path to your image
+          style={styles.crecei}
         />
   
           <Pressable style={styles.addButton} onPress={handleCrecei}>

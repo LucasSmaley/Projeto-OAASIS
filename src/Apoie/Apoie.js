@@ -15,22 +15,22 @@ export default function Transparencia() {
   const navigation = useNavigation();
 
   const handleDoa = () => {
-    const url = "https://www.oaasis.org.br/doacao"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/doacao"; 
     Linking.openURL(url);
   };
 
   const handleNf = () => {
-    const url = "https://www.oaasis.org.br/nf-paulista"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/nf-paulista"; 
     Linking.openURL(url);
   };
 
   const handleIr = () => {
-    const url = "https://www.oaasis.org.br/destinacao-do-ir"; // Specify the URL of the website you want to open
+    const url = "https://www.oaasis.org.br/destinacao-do-ir";
     Linking.openURL(url);
   };
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.title}>APOIE</Text>
 
@@ -43,7 +43,7 @@ export default function Transparencia() {
       <View style={styles.container}>
         <Image
           source={require("../../assets/doacao.png")} 
-          style = {styles.doacoesImg}// Specify the path to your image
+          style = {styles.doacoesImg}
         />
 
         <Pressable style={styles.addButton} onPress={handleDoa}>
@@ -54,7 +54,7 @@ export default function Transparencia() {
       <View style={styles.container}>
         <Image
           source={require("../../assets/notafiscal.png")}
-          style = {styles.doacoesImg} // Specify the path to your image
+          style = {styles.doacoesImg} 
         />
 
         <Pressable style={styles.addButton} onPress={handleNf}>
@@ -65,7 +65,7 @@ export default function Transparencia() {
       <View style={styles.container}>
         <Image
           source={require("../../assets/ir.png")}
-          style = {styles.doacoesImg} // Specify the path to your image
+          style = {styles.doacoesImg}
         />
 
         <Pressable style={styles.addButton} onPress={handleIr}>

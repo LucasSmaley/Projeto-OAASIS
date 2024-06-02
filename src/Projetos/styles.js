@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+
+  background:{
+
+    backgroundColor: '#cbf3f0',
+  },
+
   container: {
     flex: 1,
     alignItems: 'center',
@@ -8,32 +14,14 @@ export const styles = StyleSheet.create({
     padding: 20,
     margin: 10,
     backgroundColor: '#12B6B4',
+    borderRadius: 25,
   },
 
-  proj:{
+  img:{
 
     width: 200,
     height: 200,
     borderRadius: 100,
-  },
-
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'blue',
-    marginBottom: 20,
-  },
-
-  informativosContainer: {
-
-    textAlign: 'justify',
-    color: 'white',
-    fontWeight: 'bold',
-  },
-
-  eventoItem: {
-    fontSize: 16,
-    marginBottom: 10,
   },
 
   addButton: {
@@ -41,7 +29,8 @@ export const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    margin: 10,
+    margin: 15,
+    backgroundColor: '#00bbf9',
   },
 
   addButtonText: {

@@ -7,54 +7,49 @@ export default function TelaInicialPai() {
   const navigation = useNavigation();
 
   const handleNews = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
-    navigation.navigate("Noticias");
+    navigation.navigate("Notificações");
   };
 
   const handlePlans = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
-    navigation.navigate("PlanejamentoAnual");
+    navigation.navigate("Planejamento Anual");
   };
 
   const handleAboutUs = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
-    navigation.navigate("SobreNos");
+    navigation.navigate("Sobre Nós");
   };
 
   const handleTransp = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
     navigation.navigate("Transparencia");
   };
 
   const handleProj = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
     navigation.navigate("Projetos");
   };
 
   const handleEv = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
+
     navigation.navigate("Eventos");
   };
 
   const handleAp = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
+
     navigation.navigate("Apoie");
   };
 
   const handlePar = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
+
     navigation.navigate("Parceiros");
   };
 
   const handleCon = () => {
-    // Navegar para a tela de criação de login (CriarLogin)
+
     navigation.navigate("Contato");
   };
 
   return (
     <View style={styles.container}>
       <Pressable style={styles.formButton} onPress={handleNews}>
-        <Text style={styles.textButton}>Avisos da Criança</Text>
+        <Text style={styles.textButton}>Notificações</Text>
       </Pressable>
       <Pressable style={styles.formButton} onPress={handlePlans}>
         <Text style={styles.textButton}>Planejamento Anual</Text>
