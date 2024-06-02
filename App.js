@@ -7,6 +7,13 @@ import CriarLogin from './src/CriarLogin/CriarLogin';
 import Noticias from './src/Noticias/Noticias';
 import TelaInicialPai from './src/TelaInicialPai/TelaInicialPai';
 import PlanejamentoAnual from './src/PlanejamentoAnual/PlanejamentoAnual';
+import SobreNos from './src/SobreNos/SobreNos';
+import Transparencia from './src/Transparencia/Transparencia';
+import Projetos from './src/Projetos/Projetos';
+import Eventos from './src/Eventos/Eventos';
+import Apoie from './src/Apoie/Apoie';
+import Parceiros from './src/Parceiros/Parceiros';
+import Contato from './src/Contato/Contato';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +26,13 @@ export default function App() {
         <Stack.Screen name="CriarLogin" component={CriarLogin} />
         <Stack.Screen name="TelaInicialPai" component={TelaInicialPai}/>
         <Stack.Screen name="PlanejamentoAnual" component={PlanejamentoAnual}/>
+        <Stack.Screen name="SobreNos" component={SobreNos}/>
+        <Stack.Screen name="Transparencia" component={Transparencia}/>
+        <Stack.Screen name="Projetos" component={Projetos}/>
+        <Stack.Screen name="Eventos" component={Eventos}/>
+        <Stack.Screen name="Apoie" component={Apoie}/>
+        <Stack.Screen name="Parceiros" component={Parceiros}/>
+        <Stack.Screen name="Contato" component={Contato}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
